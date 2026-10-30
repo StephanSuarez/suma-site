@@ -80,7 +80,7 @@
 
     <main>
       <h1>Política de privacidad</h1>
-      <p class="version">Versión 1 · Vigente desde el 11 de octubre de 2026</p>
+      <p class="version">Versión 2 · Vigente desde el [FECHA DE PUBLICACIÓN]</p>
       <p class="lead">Esta política explica qué datos personales trata SUMA, para qué, con quién los comparte y cómo puede ejercer sus derechos, conforme a la Ley 1581 de 2012 y al Decreto 1377 de 2013, hoy compilado en el Decreto 1074 de 2015.</p>
 
       <nav aria-label="Contenido">
@@ -126,7 +126,7 @@
           <li><b>Ubicación:</b> mientras está en línea, la app envía su ubicación GPS (por defecto cada 15 segundos), también en segundo plano y con un aviso visible. Al desconectarse deja de enviarla. No guardamos un historial de posiciones.</li>
           <li><b>Viajes y calificaciones:</b> viajes asignados (vehículo, origen, destino, distancia, precios, comisión, estados y horas) y las calificaciones que recibe (puntaje y comentario opcional).</li>
           <li><b>Saldo:</b> saldo, movimientos (cobros, ajustes, reversiones) y recargas (valor, estado, identificador de la transacción, tipo de medio de pago), más el mensaje completo que Wompi nos envía de cada transacción. Los datos de su tarjeta o cuenta los ingresa directamente en Wompi.</li>
-          <li><b>Mensajes y avisos:</b> el chat con el pasajero durante el viaje y las notificaciones de la app.</li>
+          <li><b>Mensajes y avisos:</b> el chat con el pasajero durante el viaje, que guardamos junto con la conversación del pasajero, y las notificaciones de la app.</li>
           <li><b>Datos técnicos:</b> token de notificaciones, plataforma, versión de la app, sesiones y reportes de fallos (Firebase Crashlytics) con su identificador de usuario y datos del fallo y del dispositivo.</li>
           <li><b>En su teléfono:</b> el borrador del registro y una copia de su perfil, que se borran al cerrar sesión.</li>
         </ul>
@@ -137,10 +137,10 @@
           <li><b>Nombre</b> que nos escribe cuando el bot se lo pide.</li>
           <li><b>Ubicaciones</b> de recogida y destino que comparte, y la dirección que obtenemos de Google a partir de ellas (calle, número, barrio, ciudad).</li>
           <li><b>Cotizaciones y viajes:</b> cada cotización queda registrada aunque no la confirme (origen, destino, distancia, precios, fecha). En los viajes, además, el estado, el conductor, el código de verificación y el enlace de seguimiento.</li>
-          <li><b>Mensajes:</b> lo que escribe al bot y los mensajes con el conductor durante el viaje.</li>
+          <li><b>Conversaciones por WhatsApp:</b> lo que le escribe a SUMA, lo que le responden el bot y las personas del equipo, y los mensajes con el conductor durante el viaje. Guardamos cada mensaje con su autor, fecha y estado de entrega, y las notas internas que el equipo agregue a su conversación.</li>
           <li><b>Calificaciones:</b> la que usted le da al conductor (puntaje y comentario opcional) y la que el conductor le da a usted (puntaje).</li>
         </ul>
-        <p class="muted">No guardamos el nombre de su perfil de WhatsApp ni descargamos las fotos, audios u otros archivos que envíe al bot.</p>
+        <p class="muted">No guardamos el nombre de su perfil de WhatsApp ni descargamos las fotos, audios u otros archivos que nos envíe: solo registramos de qué tipo eran.</p>
 
         <h3>Visitantes de nuestras páginas web</h3>
         <ul>
@@ -159,6 +159,7 @@
           <li>Crear y proteger las cuentas y prevenir abusos.</li>
           <li>Enviar avisos del servicio y medir su calidad con las calificaciones.</li>
           <li>Diagnosticar fallos, operar la plataforma, atender consultas y reclamos, y cumplir obligaciones legales.</li>
+          <li>Atenderlo por WhatsApp con una persona del equipo, conocer su historial de viajes para ayudarlo, revisar las conversaciones (incluidas las que tuvo con el conductor) cuando hay una queja, un reclamo o una disputa, y medir si las personas quedan conformes con el servicio.</li>
         </ul>
         <p>No usamos sus datos para publicidad. Nuestras apps y páginas no tienen herramientas de analítica ni de publicidad.</p>
       </section>
@@ -179,7 +180,8 @@
         </ul>
 
         <h3>Equipo de SUMA</h3>
-        <p>Los administradores autorizados ven los datos de los conductores, sus documentos (con enlaces que vencen a los 10 minutos), los viajes y los saldos. El número de los pasajeros lo ven parcialmente oculto.</p>
+        <p>Los administradores autorizados ven los datos de los conductores, sus documentos (con enlaces que vencen a los 10 minutos), los viajes, los saldos y las conversaciones por WhatsApp, incluido el chat entre pasajero y conductor. El administrador principal ve el número completo de los pasajeros.</p>
+        <p>Los operarios de atención solo ven las conversaciones por WhatsApp, el nombre y los viajes y calificaciones de la persona que atienden, con el número parcialmente oculto. Queda registrado quién respondió, quién tomó cada conversación y quién escribió cada nota.</p>
 
         <h3>Proveedores que tratan datos por nuestra cuenta</h3>
         <ul>
@@ -205,10 +207,11 @@
       <section id="conservacion" aria-labelledby="h-conservacion">
         <h2 id="h-conservacion">6. Cuánto tiempo conservamos los datos</h2>
         <p>Conservamos los datos mientras su cuenta o su relación con SUMA esté activa y, después, el tiempo necesario para cumplir obligaciones legales o para resolver reclamos y disputas.</p>
+        <p><b>Conversaciones por WhatsApp:</b> no las borramos de forma automática. Las conservamos mientras su relación con SUMA esté activa y, después, el tiempo necesario para atender reclamos y disputas. Puede pedir su supresión en cualquier momento (sección 8).</p>
         <p>Hoy no borramos datos de forma automática al pasar un tiempo, salvo estos datos temporales:</p>
         <ul>
           <li>Ubicación del conductor: solo la última posición, que vence a los 90 segundos.</li>
-          <li>Mensajes del chat del viaje: 24 horas desde el último mensaje.</li>
+          <li>La copia del chat del viaje que usa la app del conductor: 24 horas desde el último mensaje.</li>
           <li>Pedido en curso con el bot: se cierra tras unos 10 minutos sin actividad y se borra a más tardar a los 15 minutos (la cotización queda en el historial de viajes).</li>
           <li>Códigos por correo: válidos 5 minutos; su registro se borra a la hora.</li>
           <li>Registros del servidor en AWS CloudWatch: 30 días.</li>
@@ -272,7 +275,7 @@
 
       <section id="vigencia" aria-labelledby="h-vigencia">
         <h2 id="h-vigencia">12. Vigencia</h2>
-        <p>Esta política rige desde el 11 de octubre de 2026 (versión 1). Las bases de datos estarán vigentes mientras SUMA preste el servicio y durante los plazos de conservación de la sección 6.</p>
+        <p>Esta política rige desde el [FECHA DE PUBLICACIÓN] (versión 2). La versión 1 rigió desde el 11 de octubre de 2026. Las bases de datos estarán vigentes mientras SUMA preste el servicio y durante los plazos de conservación de la sección 6.</p>
       </section>
     </main>
 
