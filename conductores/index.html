@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="es" data-platform="desktop" data-download="loading">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Descarga la app de conductores · SUMA</title>
+  <meta name="description" content="Descarga SUMA Conductor para Android y aprende cómo registrarte, cargar tus documentos y agregar tu vehículo.">
+  <meta name="theme-color" content="#000d1c">
+  <link rel="icon" href="/media/suma-isotipo.png">
+  <script>
+    (function () {
+      var ua = navigator.userAgent;
+      var ios = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      document.documentElement.dataset.platform = ios ? 'ios' : /Android/.test(ua) ? 'android' : 'desktop';
+    })();
+  </script>
+  <style>
+    :root {
+      --bg: #000d1c;
+      --surface: #0d192d;
+      --text: #ffffff;
+      --muted: #b2b7c0;
+      --line: #1b2a42;
+      --button: #2cc6a4;
+      --button-text: #000d1c;
+      --focus: #00bbf4;
+      color-scheme: dark;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    a:hover { color: var(--muted); }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+    h1, h2, h3, h4, p { margin: 0; }
+    strong { font-weight: 600; color: var(--text); }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 20px 24px 48px; }
+    .logo { display: block; width: 138px; height: 30px; }
+    .layout { display: grid; gap: 48px; margin-top: 40px; }
+    h1 { font-size: clamp(40px, 5vw, 52px); line-height: 1.08; letter-spacing: -0.02em; }
+    .lead, .muted { color: var(--muted); }
+    .lead { margin-top: 14px; }
+    .small { font-size: 15px; }
+    .btn { display: flex; align-items: center; justify-content: center; gap: 10px; border-radius: 999px; font-weight: 700; text-decoration: none; }
+    .btn:active { transform: scale(0.98); }
+    .btn-primary { min-height: 56px; width: 100%; border: 0; background: var(--button); color: var(--button-text); font: inherit; font-weight: 700; cursor: pointer; }
+    .btn-primary:hover { color: var(--button-text); opacity: 0.88; }
+    .btn-line { min-height: 44px; padding: 0 18px; border: 1px solid var(--muted); font-size: 15px; font-weight: 600; white-space: nowrap; }
+    .download { margin-top: 28px; }
+    .meta { margin-top: 10px; text-align: center; font-size: 15px; color: var(--muted); }
+    .qr-card { margin-top: 32px; padding: 28px; border-radius: 20px; background: var(--surface); display: flex; flex-wrap: wrap; gap: 24px; align-items: center; }
+    .qr { flex: none; width: 188px; height: 188px; padding: 8px; border-radius: 12px; background: #ffffff; display: block; }
+    .qr-text { flex: 1 1 180px; min-width: 0; }
+    .qr-text h2 { font-size: 22px; line-height: 1.25; letter-spacing: -0.01em; }
+    .qr-text .meta { text-align: left; }
+    .qr-text .btn-line { display: inline-flex; margin-top: 14px; }
+    .note { margin-top: 16px; }
+    .notice { margin-top: 28px; padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+    .notice h2 { font-size: 18px; line-height: 1.3; }
+    .notice p { margin-top: 6px; color: var(--muted); font-size: 16px; }
+    .notice .btn-primary { margin-top: 16px; min-height: 52px; }
+    .steps-title { font-size: clamp(28px, 3vw, 30px); line-height: 1.15; letter-spacing: -0.02em; }
+    .before { margin-top: 10px; color: var(--muted); }
+    .steps { list-style: none; margin: 32px 0 0; padding: 0; display: flex; flex-direction: column; gap: 28px; }
+    .steps > li { display: flex; gap: 16px; }
+    .steps > li > div { flex: 1; min-width: 0; }
+    .num { flex: none; width: 32px; height: 32px; border-radius: 50%; background: var(--surface); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; }
+    .steps h3 { margin-top: 3px; font-size: 18px; line-height: 1.3; }
+    .steps li p { margin-top: 4px; color: var(--muted); font-size: 16px; }
+    .options { margin-top: 14px; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
+    .option { padding: 16px; border: 1px solid var(--line); border-radius: 14px; }
+    .option h4 { font-size: 16px; line-height: 1.3; }
+    .option p { margin-top: 6px; font-size: 15px; }
+    .help { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 16px; color: var(--muted); }
+    [hidden] { display: none !important; }
+    html:not([data-platform="android"]) .for-android,
+    html:not([data-platform="desktop"]) .for-desktop,
+    html:not([data-platform="ios"]) .for-ios,
+    html[data-platform="ios"] .not-ios,
+    html:not([data-download="ready"]) .when-ready,
+    html:not([data-download="loading"]) .when-loading,
+    html:not([data-download="failed"]) .when-failed,
+    html:not([data-download="missing"]) .when-missing { display: none; }
+    html[data-platform="ios"] .notice { display: none; }
+    @media (min-width: 960px) {
+      .wrap { padding: 24px 24px 64px; }
+      .layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 72px; align-items: start; margin-top: 48px; }
+      .hero { position: sticky; top: 32px; }
+    }
+    @media (prefers-reduced-motion: reduce) { .btn:active { transform: none; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a href="/" aria-label="SUMA"><img class="logo" src="/media/suma-logo-white.png" alt="SUMA" width="166" height="36"></a>
+
+    <div class="layout">
+      <section class="hero" aria-labelledby="titulo">
+        <h1 id="titulo" class="not-ios">Descarga la app de conductores</h1>
+        <p class="lead not-ios">Recibe viajes en Fusagasugá con tu carro o tu moto.</p>
+        <h1 class="for-ios">La app es solo para Android, por ahora</h1>
+        <p class="lead for-ios">Todavía no está disponible para iPhone. Si tienes un celular Android, abre esta página desde ahí.</p>
+
+        <div class="download for-android">
+          <a class="btn btn-primary when-ready" data-apk href="#">
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12"></path><path d="m7 11 5 5 5-5"></path><path d="M5 20h14"></path></svg>
+            Descargar para Android
+          </a>
+          <p class="meta when-loading" role="status">Buscando la versión actual…</p>
+          <p class="meta when-ready" data-meta></p>
+          <p class="meta when-ready">¿Ya tienes la app? Instala esta versión encima.</p>
+        </div>
+
+        <div class="for-desktop">
+          <div class="qr-card">
+            <img class="qr" src="/media/qr-conductores.svg" alt="Código QR de sumamovil.site/conductores" width="188" height="188">
+            <div class="qr-text">
+              <h2>Escanea este código con tu celular Android</h2>
+              <p class="meta when-ready" data-meta></p>
+              <a class="btn btn-line when-ready" data-apk href="#">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12"></path><path d="m7 11 5 5 5-5"></path><path d="M5 20h14"></path></svg>
+                Descargar archivo
+              </a>
+            </div>
+          </div>
+          <p class="note muted small">La app se instala en el celular, no en el computador.</p>
+        </div>
+
+        <div class="notice when-failed" role="alert">
+          <h2>No pudimos cargar la descarga</h2>
+          <p>Revisa tu conexión e inténtalo de nuevo.</p>
+          <button class="btn btn-primary" type="button" id="reintentar">Intentar de nuevo</button>
+        </div>
+        <div class="notice when-missing" role="status">
+          <h2>La descarga no está disponible en este momento</h2>
+          <p>Vuelve a intentarlo más tarde.</p>
+        </div>
+      </section>
+
+      <section id="pasos" aria-labelledby="pasos-titulo">
+        <h2 id="pasos-titulo" class="steps-title">Cómo empezar</h2>
+        <p class="before">Ten a la mano tu cédula, tu licencia y, si vas a registrar tu vehículo, su tarjeta de propiedad.</p>
+        <ol class="steps">
+          <li>
+            <span class="num" aria-hidden="true">1</span>
+            <div>
+              <h3>Instala la app</h3>
+              <p>Abre el archivo descargado. Si tu celular lo pide, permite instalar desde esta fuente.</p>
+            </div>
+          </li>
+          <li>
+            <span class="num" aria-hidden="true">2</span>
+            <div>
+              <h3>Crea tu cuenta y carga tus documentos</h3>
+              <p>Entra con Google o tu email. La app te guía para escanear tu cédula y tu licencia, por las dos caras, y tomarte una foto de perfil.</p>
+            </div>
+          </li>
+          <li>
+            <span class="num" aria-hidden="true">3</span>
+            <div>
+              <h3>Espera la aprobación</h3>
+              <p>Un administrador revisa tus documentos y te avisamos cuando tu cuenta esté lista. Mientras tanto, puedes corregir tus datos.</p>
+            </div>
+          </li>
+          <li>
+            <span class="num" aria-hidden="true">4</span>
+            <div>
+              <h3>Agrega tu vehículo</h3>
+              <p>En <strong>Perfil</strong>, entra a <strong>Mis vehículos</strong>.</p>
+              <div class="options">
+                <div class="option">
+                  <h4>Si es tuyo</h4>
+                  <p>Toca <strong>Registrar vehículo</strong> y carga la tarjeta de propiedad. Un administrador lo revisa.</p>
+                </div>
+                <div class="option">
+                  <h4>Si es de otra persona</h4>
+                  <p>Toca <strong>Solicitar por placa</strong>. Su dueño debe aprobar tu solicitud.</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="num" aria-hidden="true">5</span>
+            <div>
+              <h3>Recarga saldo y conéctate</h3>
+              <p>SUMA descuenta un cargo de tu saldo por cada viaje. Recarga en <strong>Saldo</strong> y toca <strong>Conectarme</strong> para empezar a recibir viajes.</p>
+            </div>
+          </li>
+        </ol>
+        <p class="help" id="ayuda" hidden>¿Te trabaste en algún paso? <a id="soporte" href="#">Escribir a soporte</a></p>
+      </section>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var API = 'https://api.sumamovil.site/api/ms/driversapp-service/app/config';
+      var root = document.documentElement;
+
+      function show(state) { root.dataset.download = state; }
+
+      function apply(config) {
+        var digits = (config.support_whatsapp || '').replace(/\D/g, '');
+        if (digits) {
+          document.getElementById('soporte').href = 'https://wa.me/' + digits + '?text=' + encodeURIComponent('Hola, necesito ayuda para empezar con SUMA Conductor.');
+          document.getElementById('ayuda').hidden = false;
+        }
+        var url = config.apk_url || '';
+        if (url.indexOf('https://') !== 0) return show('missing');
+        var version = /-(\d+\.\d+\.\d+)-\d+\.apk$/.exec(url);
+        var meta = (version ? 'Versión ' + version[1] + ' · ' : '') + 'Unos 141 MB';
+        document.querySelectorAll('[data-apk]').forEach(function (link) { link.href = url; });
+        document.querySelectorAll('[data-meta]').forEach(function (line) { line.textContent = meta; });
+        show('ready');
+      }
+
+      function load() {
+        show('loading');
+        var controller = new AbortController();
+        var timer = setTimeout(function () { controller.abort(); }, 10000);
+        fetch(API, { signal: controller.signal })
+          .then(function (response) {
+            if (!response.ok) throw new Error('config ' + response.status);
+            return response.json();
+          })
+          .then(apply)
+          .catch(function () { show('failed'); })
+          .finally(function () { clearTimeout(timer); });
+      }
+
+      document.getElementById('reintentar').addEventListener('click', load);
+      load();
+    })();
+  </script>
+</body>
+</html>
