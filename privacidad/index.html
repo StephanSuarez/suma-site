@@ -80,7 +80,7 @@
 
     <main>
       <h1>Política de privacidad</h1>
-      <p class="version">Versión 4 · Vigente desde el 2 de noviembre de 2026</p>
+      <p class="version">Versión 5 · Vigente desde el 12 de noviembre de 2026</p>
       <p class="lead">Esta política explica qué datos personales trata SUMA, para qué, con quién los comparte y cómo puede ejercer sus derechos, conforme a la Ley 1581 de 2012 y al Decreto 1377 de 2013, hoy compilado en el Decreto 1074 de 2015.</p>
 
       <nav aria-label="Contenido">
@@ -128,6 +128,7 @@
           <li><b>Saldo:</b> saldo, movimientos (cobros, ajustes, reversiones) y recargas (valor, estado, identificador de la transacción, tipo de medio de pago), más el mensaje completo que Wompi nos envía de cada transacción. Los datos de su tarjeta o cuenta los ingresa directamente en Wompi.</li>
           <li><b>Mensajes y avisos:</b> el chat con el pasajero durante el viaje, que guardamos junto con la conversación del pasajero, y las notificaciones de la app.</li>
           <li><b>Comunidad:</b> sus reacciones, comentarios y reportes en las publicaciones de la app, y si está bloqueado para participar. Los demás conductores ven sus comentarios con su nombre y la inicial de su apellido. El equipo de SUMA ve su nombre completo.</li>
+          <li><b>Radio:</b> su voz, solo mientras mantiene oprimido el botón para hablar, que se transmite en vivo a quienes estén conectados al radio. No la grabamos ni la guardamos. La app usa el micrófono únicamente mientras mantiene oprimido ese botón. Mientras está en el radio, los demás conectados ven su nombre y cuándo habla.</li>
           <li><b>Datos técnicos:</b> token de notificaciones, plataforma, versión de la app, sesiones y reportes de fallos (Firebase Crashlytics) con su identificador de usuario y datos del fallo y del dispositivo.</li>
           <li><b>En su teléfono:</b> el borrador del registro y una copia de su perfil, que se borran al cerrar sesión.</li>
         </ul>
@@ -160,6 +161,7 @@
           <li>Crear y proteger las cuentas y prevenir abusos.</li>
           <li>Enviar avisos del servicio y medir su calidad con las calificaciones.</li>
           <li>Compartir novedades y promociones con los conductores, permitirles comentar y moderar esos comentarios.</li>
+          <li>Permitir que los conductores aprobados y el equipo de SUMA hablen en vivo por el radio de la app y del panel.</li>
           <li>Diagnosticar fallos, operar la plataforma, atender consultas y reclamos, y cumplir obligaciones legales.</li>
           <li>Atenderlo por WhatsApp con una persona del equipo, conocer su historial de viajes para ayudarlo, revisar las conversaciones (incluidas las que tuvo con el conductor) cuando hay una queja, un reclamo o una disputa, y medir si las personas quedan conformes con el servicio.</li>
         </ul>
@@ -179,6 +181,7 @@
           <li><b>El dueño de un vehículo</b> ve el nombre y el número de documento de los conductores asignados o invitados a su vehículo.</li>
           <li><b>Los conductores que comparten un vehículo</b> ven el nombre del dueño y de los demás conductores.</li>
           <li><b>Otros conductores de SUMA</b> pueden consultar su calificación promedio y cuántas calificaciones tiene.</li>
+          <li><b>Quienes estén en el radio</b> (conductores aprobados y el equipo de SUMA) escuchan en vivo lo que usted dice mientras mantiene oprimido el botón, y ven su nombre y quién está conectado.</li>
         </ul>
 
         <h3>Equipo de SUMA</h3>
@@ -187,7 +190,7 @@
 
         <h3>Proveedores que tratan datos por nuestra cuenta</h3>
         <ul>
-          <li><b>Amazon Web Services (AWS):</b> servidor, base de datos, documentos, fotos, audios, videos y registros técnicos; aloja todos los datos del servicio.</li>
+          <li><b>Amazon Web Services (AWS):</b> servidor, base de datos, documentos, fotos, audios, videos y registros técnicos; aloja todos los datos del servicio. El radio funciona en nuestro propio servidor en AWS: la voz pasa por él en vivo y no se guarda.</li>
           <li><b>Meta (WhatsApp):</b> canal con el pasajero. Recibe su número, sus mensajes y lo que le enviamos (nombre, foto y placa del conductor, código, enlace de seguimiento, precios, chat y los archivos que le envíe nuestro equipo). Si un conductor escribe al bot, también su número.</li>
           <li><b>Google:</b> mapas, direcciones y rutas (Google Maps Platform), con coordenadas de origen, destino y del conductor; notificaciones push (Firebase Cloud Messaging), con avisos que incluyen nombres de dueños o conductores, placas y hasta 120 caracteres de los mensajes del pasajero; reportes de fallos (Firebase Crashlytics); fuentes tipográficas de la app del conductor (Google Fonts), que recibe la IP del teléfono al descargarlas, e inicio de sesión con Google.</li>
           <li><b>Apple:</b> inicio de sesión con Apple y entrega de notificaciones en iPhone.</li>
@@ -210,6 +213,7 @@
         <h2 id="h-conservacion">6. Cuánto tiempo conservamos los datos</h2>
         <p>Conservamos los datos mientras su cuenta o su relación con SUMA esté activa y, después, el tiempo necesario para cumplir obligaciones legales o para resolver reclamos y disputas.</p>
         <p><b>Conversaciones por WhatsApp, con sus archivos:</b> no las borramos de forma automática. Las conservamos mientras su relación con SUMA esté activa y, después, el tiempo necesario para atender reclamos y disputas. Puede pedir su supresión en cualquier momento (sección 8); al suprimirlas, la copia de seguridad de las fotos y audios se borra a los 30 días.</p>
+        <p><b>Radio:</b> no grabamos ni guardamos el audio. El servidor del radio registra en sus registros técnicos quién se conectó y cuándo, que se borran a los 30 días.</p>
         <p><b>Comentarios en Comunidad:</b> cuando un conductor borra un comentario, los demás conductores dejan de verlo, pero SUMA lo conserva y su equipo puede verlo marcado como eliminado, para moderar y atender reclamos. Lo mismo ocurre con los comentarios ocultos por moderación. No los borramos de forma automática. Puede pedir su supresión (sección 8).</p>
         <p>Hoy no borramos datos de forma automática al pasar un tiempo, salvo estos datos temporales:</p>
         <ul>
@@ -278,7 +282,7 @@
 
       <section id="vigencia" aria-labelledby="h-vigencia">
         <h2 id="h-vigencia">12. Vigencia</h2>
-        <p>Esta política rige desde el 2 de noviembre de 2026 (versión 4). La versión 3 rigió desde el 2 de noviembre de 2026, la versión 2 desde el 31 de octubre de 2026 y la versión 1 desde el 11 de octubre de 2026. Las bases de datos estarán vigentes mientras SUMA preste el servicio y durante los plazos de conservación de la sección 6.</p>
+        <p>Esta política rige desde el 12 de noviembre de 2026 (versión 5). La versión 4 rigió desde el 2 de noviembre de 2026, la versión 3 desde el 2 de noviembre de 2026, la versión 2 desde el 31 de octubre de 2026 y la versión 1 desde el 11 de octubre de 2026. Las bases de datos estarán vigentes mientras SUMA preste el servicio y durante los plazos de conservación de la sección 6.</p>
       </section>
     </main>
 
